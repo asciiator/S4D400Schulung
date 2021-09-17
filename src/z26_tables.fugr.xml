@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>TRAIN-26 TABLES</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZ26_TABLESTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZ26_TABLES</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z26_GET_FLIGHTS_FOR_CONNECTION</FUNCNAME>
+     <SHORT_TEXT>Flights for connections</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_CONNECTIONS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>Z26_T_CONNECTIONS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_FLIGHTS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>D400_T_FLIGHTS</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CX_S4D400_NO_DATA</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_CONNECTIONS</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_FLIGHTS</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CX_S4D400_NO_DATA</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+     <EXCEPTION_CLASSES>X</EXCEPTION_CLASSES>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
